@@ -16,7 +16,14 @@ This project compares deploying a MySQL database on an Azure Virtual Machine (VM
 
  2–4 minute **recording** (Zoom/Loom link in README) showing:
 
-[(YouTube Video)]()
+
+# Youtube Video recording
+
+[MySQL on VM vs Managed Service (YouTube Video)](https://youtu.be/78j4WsGiqzI)
+
+[![MySQL on VM vs Managed Service](screenshots/vm/Screenshot%202025-11-12%20175029.png)](https://youtu.be/78j4WsGiqzI)
+
+
 
 * Your repo
 * Running each script end-to-end (VM then Managed) and printed results
