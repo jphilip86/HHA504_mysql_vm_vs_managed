@@ -184,3 +184,5 @@ I also had to spend some time troubleshooting either due to wrong vm user name i
 ![VM](screenshots/vm/Screenshot%202025-11-11%20160051.png)
 
 ## Further screenshots of steps are in the screenshots folder.
+
+## Made sure to delete VM and SQL server on Azure to not incur charges.  Thank you for this assignment.
