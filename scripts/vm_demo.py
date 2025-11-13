@@ -4,7 +4,7 @@ from datetime import datetime
 import pandas as pd
 from sqlalchemy import create_engine, text
 
-load_dotenv(".env.example")  # or ".env.example" if that's your env file
+load_dotenv()  # Load environment variables from .env file
 
 # USE THE PUBLIC IP FOR REMOTE ACCESS!
 VM_DB_USER = os.getenv("VM_DB_USER")

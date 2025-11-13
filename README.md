@@ -16,16 +16,15 @@ This project compares deploying a MySQL database on an Azure Virtual Machine (VM
 
  2–4 minute **recording** (Zoom/Loom link in README) showing:
 
-
 # Youtube Video recording
 
 [MySQL on VM vs Managed Service (YouTube Video)](https://youtu.be/78j4WsGiqzI)
 
 [![MySQL on VM vs Managed Service](screenshots/vm/Screenshot%202025-11-12%20175029.png)](https://youtu.be/78j4WsGiqzI)
 
+showing
 
-
-* Your repo
+* My repo
 * Running each script end-to-end (VM then Managed) and printed results
 
 [Setup Notes for Managed](docs/setup_notes_managed.md)
@@ -45,7 +44,7 @@ This project compares deploying a MySQL database on an Azure Virtual Machine (VM
    import pandas as pd: Imports pandas, a data analysis and table-handling library, under the alias pd.
    from sqlalchemy import create_engine, text: Imports functions to connect to SQL databases and execute custom SQL statements.
 2. Load Environment Variables
-   load_dotenv(".env.example"): Loads key-value pairs from .env.example into your environment, so credentials and secrets stay out of source code.
+   load_dotenv(): Loads key-value pairs from .env into environment, so credentials and secrets stay out of source code.
 3. Set Connection Variables
    VM_DB_USER = os.getenv("VM_DB_USER"): Gets the database user name from the environment.
    VM_DB_PASS = os.getenv("VM_DB_PASS"): Gets the database password from the environment.
@@ -91,7 +90,7 @@ This script demonstrates a step-by-step workflow for connecting to a managed MyS
 4. Connect to Managed MySQL Server
    Creates a connection URL to the MySQL server without specifying a database.
    Connects to the server and ensures the target database exists (using CREATE DATABASE IF NOT EXISTS).
-   Outputs the connection status, obfuscating the password for safety.
+   Outputs the connection status, hiding the password for safety.
 5. Connect to the Target Database
    Builds the URL for connecting directly to the database.
    Initializes the SQLAlchemy engine with SSL settings.
@@ -106,7 +105,12 @@ This script demonstrates a step-by-step workflow for connecting to a managed MyS
 
 ## 4. Environment Variable Example
 
-- `.env.example`: Template for all connection secrets (do NOT commit actual `.env`)
+- `.env`:  for all connection secrets (do NOT commit  `.env`)
+
+I had accidentally committed env.example with actual psw and ip addresses and then realized my mistake.
+I then moved the real secrets to .env and deleted .env.example ensuring .env was in gitignore.
+
+The recording was taken with .env example which I had deleted and replaced with .env
 
 ## 5. Screenshots/Evidence
 
@@ -133,6 +137,10 @@ This script demonstrates a step-by-step workflow for connecting to a managed MyS
 
 ![Managed](screenshots/managed/Screenshot%202025-11-06%20205558.png)
 
+![Managed](screenshots/vm/Screenshot%202025-11-13%20094639.png)
+
+![Managed](screenshots/vm/Screenshot%202025-11-13%20094704.png)
+
 - **VM**
 
 powershell- changing bind address
@@ -151,11 +159,11 @@ Powershell- sudo updates
 
 - **Managed**
 
-![Managed](screenshots/managed/Screenshot%202025-11-12%20145503.png)
+![Managed](screenshots/managed/Screenshot%202025-11-13%20104246.png)
 
 - **VM**
 
-![VM](screenshots/vm/Screenshot%202025-11-11%20214405.png)
+![VM](screenshots/vm/Screenshot%202025-11-13%20104315.png)
 
 ### Any troubleshooting/error screens
 
@@ -165,8 +173,14 @@ I had out of memory issues and was forced to increase RAM size. LLM was used to 
 
 ![VM](screenshots/vm/Screenshot%202025-11-11%20161908.png)
 
+Also began getting this error in vscode and with help from stackoverflow
+https://stackoverflow.com/questions/71106136/jupyter-extension-for-vscode-on-linux-throws-error-when-doing-anything-jupyter-r
+was able to resolve it for now.
+
+![VM](screenshots/vm/Screenshot%202025-11-13%20103225.png)
+
 I also had to spend some time troubleshooting either due to wrong vm user name input or forgotten password.
 
 ![VM](screenshots/vm/Screenshot%202025-11-11%20160051.png)
 
-Further screenshots of steps are in the screenshots folder.
+## Further screenshots of steps are in the screenshots folder.

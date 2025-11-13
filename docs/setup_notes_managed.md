@@ -15,11 +15,11 @@
 4. I was able to deploy rather easily with Chile Central region.
 5. DB name = phil
 6. Use Azure portal  to set up user/db with provided endpoint info
-7. .env.example for connection secrets; do not commit real .env.
+7. env for connection secrets; not committing  .env. and ensuring it is in gitignore.
 
 ## Troubles you hit and how you solved them**
 
-1. I had issues with SSL and had written in the notes  along iwith the modified code.
+1. I had issues with SSL and had written in the notes  along with the modified code.
 2. I had to reference Perplexity in order to understand the issue .
 3. I had to remove  ssl= or ?ssl= part from SQLAlchemy connection string and engine call.
 

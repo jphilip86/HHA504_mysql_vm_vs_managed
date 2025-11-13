@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 
 # --- 0) Load environment ---
 # Make sure your .env.example (or .env) contains MAN_DB_HOST, MAN_DB_USER, etc.
-load_dotenv(".env.example") 
+load_dotenv()  # Load environment variables from .env file
 
 MAN_DB_HOST = os.getenv("MAN_DB_HOST")
 MAN_DB_PORT = os.getenv("MAN_DB_PORT")
